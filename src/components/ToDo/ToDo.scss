@@ -2,3 +2,27 @@
     text-decoration: line-through;
 }
 
+.to-do{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px ;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-radius: 7px;
+
+    &__div{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__button{
+        background-color: white;
+        padding-left: 7px;
+        padding-bottom: 3px;
+        font-size: 20px;
+        border-radius: 20px;
+        font-weight: bolder;
+    }
+}

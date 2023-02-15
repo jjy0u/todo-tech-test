@@ -7,9 +7,9 @@ const Main = (props) => {
     const {toDoArr,handleClick, handleCheck, checkStatus, handleSubmit} = props
 
   return (
-    <div>
+    <div className='main'>
         <InputBox handleSubmit = {handleSubmit}/>
-        <ToDoList toDoArr={toDoArr} handleClick={handleClick} handleCheck={handleCheck} checkStatus={checkStatus}/>
+        <ToDoList toDoArr={toDoArr} handleClick={handleClick} handleCheck={handleCheck}/>
     </div>
   )
 }

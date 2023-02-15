@@ -5,11 +5,14 @@ import Main from './components/Main/Main';
 
 function App() {
   const [toDo, setToDo] = useState([])
-  const [checkStatus, setCheckStatus] = useState("unchecked")
 
   const handleSubmit = (event) => {
-      event.preventDefault()
-      setToDo(oldArray => [event.target[0].value,...oldArray])
+    event.preventDefault()
+      if (event.target[0].value == ""){
+        alert("please enter a todo")
+      } else {
+        setToDo(oldArray => [event.target[0].value,...oldArray])
+      }
       //event.target.reset()
   }
 
@@ -22,18 +25,15 @@ function App() {
       setToDo(toDoCopy)
   }
 
-  const handleCheck = (event) => {
-      console.log(event.target.value)
-      if(checkStatus=== "unchecked"){
-          setCheckStatus("checked")
-      } else {
-          setCheckStatus("unchecked")
-      }
-  }
+  const handleReset = (event) => {
+   setToDo([])
+}
+
+
   return (
     <div className="App">
-      <Nav/>
-      <Main handleSubmit = {handleSubmit} toDoArr={toDo} handleClick={handleClick} handleCheck={handleCheck} checkStatus={checkStatus}/>
+      <Nav handleReset={handleReset}/>
+      <Main handleSubmit = {handleSubmit} toDoArr={toDo} handleClick={handleClick}/>
     </div>
   );
 }

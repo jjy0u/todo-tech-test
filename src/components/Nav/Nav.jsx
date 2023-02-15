@@ -5,8 +5,8 @@ import './Nav.scss'
 const Nav = (props) => {
   const {handleReset} = props
   return (
-    <div>
-        <h1>My Todos</h1>
+    <div className='nav'>
+        <h1 className='nav__title'>My Todos</h1>
         <ResetButton handleReset={handleReset}/>
     </div>
   )

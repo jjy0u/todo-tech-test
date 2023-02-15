@@ -4,7 +4,7 @@ import './ResetButton.scss'
 const ResetButton = (props) => {
     const {handleReset} = props
   return (
-    <button onClick={handleReset}>Reset</button>
+    <button className='reset' onClick={handleReset}>Reset</button>
   )
 }
 
