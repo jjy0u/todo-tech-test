@@ -4,7 +4,7 @@ import InputBox from '../InputBox/InputBox'
 import ToDoList from '../../containers/ToDoList/ToDoList'
 
 const Main = (props) => {
-    const {toDoArr,handleClick, handleCheck, checkStatus, handleSubmit} = props
+    const {toDoArr,handleClick, handleCheck, handleSubmit} = props
 
   return (
     <div className='main'>

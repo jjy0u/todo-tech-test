@@ -8,7 +8,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-      if (event.target[0].value == ""){
+      if (event.target[0].value === ""){
         alert("please enter a todo")
       } else {
         setToDo(oldArray => [event.target[0].value,...oldArray])
