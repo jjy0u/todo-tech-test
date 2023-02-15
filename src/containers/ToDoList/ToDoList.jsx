@@ -3,8 +3,8 @@ import './ToDoList.scss'
 import ToDo from '../../components/ToDo/ToDo'
 
 const ToDoList = (props) => {
-  const {ToDoArr, handleClick, handleCheck, checkStatus} = props
-  const toDoJSX = ToDoArr.map((toDo, index) => {
+  const {toDoArr, handleClick, handleCheck, checkStatus} = props
+  const toDoJSX = toDoArr.map((toDo, index) => {
     return ( <ToDo 
         toDoText = {toDo}
         handleClick = {handleClick}

@@ -1,9 +1,10 @@
 import React from 'react'
 import './ResetButton.scss'
 
-const ResetButton = () => {
+const ResetButton = (props) => {
+    const {handleReset} = props
   return (
-    <div>ResetButton</div>
+    <button onClick={handleReset}>Reset</button>
   )
 }
 
