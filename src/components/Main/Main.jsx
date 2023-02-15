@@ -1,14 +1,27 @@
-import React from 'react'
+//import React, { useState } from 'react'
 import './Main.scss'
 import InputBox from '../InputBox/InputBox'
 import ToDoList from '../../containers/ToDoList/ToDoList'
 
-const Main = (props) => {
-    const {handleSubmit} = props
+const Main = () => {
+
+    //const [toDo, setToDo] = useState()
+
+    const toDoArr= ["1","2","3"]
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("hi")
+    }
+
+    const handleClick = () => {
+        console.log("hi")
+    }
+
   return (
     <div>
         <InputBox handleSubmit = {handleSubmit}/>
-        <ToDoList/>
+        <ToDoList ToDoArr={toDoArr} handleClick={handleClick}/>
     </div>
   )
 }
