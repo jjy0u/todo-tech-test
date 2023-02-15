@@ -12,11 +12,16 @@ const Main = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         setToDo(oldArray => [event.target[0].value,...oldArray])
-        event.target.reset()
+        //event.target.reset()
     }
 
-    const handleClick = () => {
-        setToDo()
+    const toDoCopy = [...toDo]
+
+    const handleClick = (event) => {
+        event.preventDefault()
+        console.log(event.target[0].value)
+        toDoCopy.splice(toDoCopy.indexOf(event.target[0].value),1)
+        setToDo(toDoCopy)
     }
 
     const handleCheck = () => {

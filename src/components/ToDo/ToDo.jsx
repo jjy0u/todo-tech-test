@@ -5,9 +5,11 @@ const ToDo = (props) => {
     const {toDoText, handleClick, handleCheck, checkStatus} = props
   return (
     <div>
-        <input type="checkbox" id="toDo" name="ToDo" value="ToDo" onClick={handleCheck}/>
-        <label htmlFor="toDo" className={checkStatus}> {toDoText} </label>
-        <button onClick={handleClick}>x</button>
+        <form onSubmit={handleClick}>
+            <input type="checkbox" id="toDo" name="ToDo" value={toDoText} onClick={handleCheck}/>
+            <label htmlFor="toDo" className={checkStatus}> {toDoText} </label>
+            <button type="submit">x</button>
+        </form>
     </div>
   )
 }
